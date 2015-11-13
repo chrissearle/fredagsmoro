@@ -98,4 +98,6 @@ module.exports = function (grunt) {
     grunt.registerTask("docker:deploy", ["gitinfo", "exec:deploydockersha", "exec:deploydocker"]);
 
     grunt.registerTask("serve", ["exec:serve"]);
+
+    grunt.registerTask("doit", ["newweek", "docker:package", "docker:deploy"]);
 };
