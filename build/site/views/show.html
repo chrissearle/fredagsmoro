@@ -7,7 +7,14 @@
 
     <div class="panel panel-default" ng-repeat="file in sc.files | orderBy:'src'">
         <div class="panel-body img">
-            <img ng-src="{{ file.src }}"/>
+            <div ng-switch on="file.type">
+                <div ng-switch-when="img">
+                    <img ng-src="{{ file.src }}"/>
+                </div>
+                <div ng-switch-when="video">
+                    <video ng-src="{{ file.src }}" autoplay loop />
+                </div>
+            </div>
         </div>
         <div class="panel-footer">
             <a class="btn btn-xs btn-primary" target="_blank" href="{{ file.src }}">direct image link</a>
