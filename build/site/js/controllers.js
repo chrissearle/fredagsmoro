@@ -36,6 +36,14 @@ app.controller("ShowController", ["$routeParams", "dataFactory", function ($rout
 
     dataFactory.filesForYearMonthDay($routeParams.year, $routeParams.month, $routeParams.day, function (files) {
         self.files = files;
+
+        files.forEach(function (file) {
+          if (file.src.endsWith(".webm") || file.src.endsWith(".mp4")) {
+            file.type = "video";
+          } else {
+            file.type = "img";
+          }
+        });
     });
 
     self.setSpeed = function(speed) {
