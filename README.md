@@ -2,6 +2,10 @@
 
 A collection of random images from the net - collected by Karl Øgaard (previously Ragnar Bergvik) and sent out each Friday to amuse their colleagues.
 
+> # Note
+>
+> This repository has been replaced by [a react based version](https://github.com/chrissearle/fredagsmoro_react)
+
 ## Live Site
 
 [http://fredagsmoro.chrissearle.org](http://fredagsmoro.chrissearle.org)
